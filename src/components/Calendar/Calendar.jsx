@@ -1,9 +1,11 @@
-import React, { Component }from "react";
+import React, { Component } from "react";
 import November from "../../calendar"
 
 import "./Calendar.css";
+
 var max = 4;
 var min = 0;
+var newAppt = [];
 
 class Calendar extends Component {
     constructor(props) {
@@ -38,6 +40,16 @@ class Calendar extends Component {
             showComp: November.filter((x, idx) => idx >= min && idx < max )
         })
     }
+
+    handleAppointment = (date, time) => {
+        newAppt.push({
+            date: date.date,
+            day: date.day,
+            month: date.month,
+            time: time
+        })
+        this.setState({ appt: newAppt })
+    }
     
     render() {
         return(
@@ -50,28 +62,34 @@ class Calendar extends Component {
                     <div className="days">
                         <i 
                             className="fas fa-arrow-circle-left" 
-                            onClick={this.prevProperty}
+                            disabled={min <= 0 }
+                            onClick={min <= 0  ? console.log(min) : this.prevProperty}
+                            style={ min === 0 ? { color: "transparent", cursor: "default" } : { color: "dimgrey" }} 
                         />
-
                         {this.state.showComp.map((date, idx) => 
                             <div className="day" key={idx}>
                                 <p>{date.day}</p>
                                 <p>{date.month} {date.date}</p> 
                             </div>   
                         )}
-
                         <i 
-                            className="fas fa-arrow-circle-right" 
-                            onClick={this.nextProperty}
+                            className="fas fa-arrow-circle-right"   
+                            onClick={max < November.length ? this.nextProperty : console.log(max)}
+                            style={ max >= November.length ? { color: "transparent", cursor: "default" } : { color: "dimgrey" }} 
                         />
                     </div>
                 </div>
-
                 <div className="time card">
                     {this.state.showComp.map((date, idx) =>
                         <div className="time-btns" key={idx}>
                             {this.state.time.map((time, idx) =>
-                                <button type="button" key={idx}> {time} </button>
+                                <button 
+                                    type="button"   
+                                    key={idx}
+                                    onClick={() => this.handleAppointment(date, time)}
+                                > 
+                                    {time} 
+                                </button>
                             )}
                             <button type="button"> MORE </button>
                         </div>
