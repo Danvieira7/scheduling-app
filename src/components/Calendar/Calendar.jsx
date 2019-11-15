@@ -62,14 +62,14 @@ class Calendar extends Component {
                     <div className="days">
                         <i 
                             className="fas fa-arrow-circle-left" 
-                            disabled={min <= 0 }
-                            onClick={min <= 0  ? console.log(min) : this.prevProperty}
-                            style={ min === 0 ? { color: "transparent", cursor: "default" } : { color: "dimgrey" }} 
+                            disabled={ min <= 0 }
+                            onClick={ min <= 0  ? console.log(min) : this.prevProperty }
+                            style={ min === 0 ? { color: "transparent", cursor: "default" } : { color: "dimgrey" } } 
                         />
                         {this.state.showComp.map((date, idx) => 
                             <div className="day" key={idx}>
-                                <p>{date.day}</p>
-                                <p>{date.month} {date.date}</p> 
+                                <p>{ date.day }</p>
+                                <p className="mm-dd">{ date.month } { date.date }</p> 
                             </div>   
                         )}
                         <i 
@@ -81,16 +81,24 @@ class Calendar extends Component {
                 </div>
                 <div className="time card">
                     {this.state.showComp.map((date, idx) =>
-                        <div className="time-btns" key={idx}>
-                            {this.state.time.map((time, idx) =>
-                                <button 
-                                    type="button"   
-                                    key={idx}
-                                    onClick={() => this.handleAppointment(date, time)}
-                                > 
-                                    {time} 
-                                </button>
-                            )}
+                        <div className="time-btns" key={ idx }>
+                            {this.state.time.map((time, idx) => {
+                                let disable = false;
+                                for(let i = 0; i < this.state.appt.length ; i++) {
+                                    disable = this.state.appt[i].time === time && this.state.appt[i].date === date.date;
+                                    if(disable)break
+                                }
+                                return(
+                                    <button 
+                                        type="button"   
+                                        key={ idx }
+                                        disabled={ disable }
+                                        onClick={ () => this.handleAppointment(date, time) }
+                                    > 
+                                        { time }  
+                                    </button>
+                                )                                
+                            })}
                             <button type="button"> MORE </button>
                         </div>
                     )}

@@ -17,6 +17,10 @@
     width: 20%;
 }
 
+.mm-dd {
+    font-weight: bold;
+}
+
 .days-disp {
     margin-bottom: 20px;
     box-shadow: 10px 10px 5px grey;

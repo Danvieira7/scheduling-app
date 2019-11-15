@@ -13,14 +13,15 @@ const DocDescription = () => {
                         <p> <a href="/">PSICOLOGIST</a> | Lisbon</p>
                     </div>
                     <p>
-                        <i className="fas fa-star" style={{color: "rgb(254, 214, 98)"}}></i>  
-                        <i className="fas fa-star" style={{color: "rgb(254, 214, 98)"}}></i>  
-                        <i className="fas fa-star" style={{color: "rgb(254, 214, 98)"}}></i>  
-                        <i className="fas fa-star" style={{color: "rgb(254, 214, 98)"}}></i>  
-                        <i className="fas fa-star" style={{color: "rgb(254, 214, 98)"}}></i>  
+                        <i className="fas fa-star" style={ { color: "rgb(254, 214, 98)" } }></i>  
+                        <i className="fas fa-star" style={ { color: "rgb(254, 214, 98)" } }></i>  
+                        <i className="fas fa-star" style={ { color: "rgb(254, 214, 98)" } }></i>  
+                        <i className="fas fa-star" style={ { color: "rgb(254, 214, 98)" } }></i>  
+                        <i className="fas fa-star" style={ { color: "rgb(254, 214, 98)" } }></i>  
+                         
                         (20 Reviews)
-                    </p>
-                    <h2>R$160 /50 minutes</h2>
+                    </p >
+                    <div className="price"> <h2>R$160</h2> / 50 MINUTES </div>
                 </div>
             </div>
             <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam delectus officia perspiciatis illo recusandae similique neque velit beatae culpa. Iure error perspiciatis debitis nulla quis nihil! Consequuntur magnam cupiditate illo.</p>
