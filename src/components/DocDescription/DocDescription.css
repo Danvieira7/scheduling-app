@@ -1,0 +1,31 @@
+.doc {
+    padding: 10px;
+    width: 55%;
+    text-align: left;
+}
+
+img {
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.profile {
+    display: flex;
+}
+
+.disc {
+    line-height: 0.5;
+    padding: 10px;
+    color: dimgray;
+}
+
+.description {
+    color: dimgray;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.proffe {
+    display: flex;
+    align-items: center;
+}

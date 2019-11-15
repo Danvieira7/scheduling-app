@@ -1,0 +1,66 @@
+.calendar {
+    margin: 5px;
+    padding: 5px;
+    width: 45%
+}
+
+.days {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    line-height: 0.5;
+    padding: 10px;
+    color: dimgray;
+}
+
+.day {
+    width: 20%;
+}
+
+.days-disp {
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.fa-arrow-circle-left, .fa-arrow-circle-right {
+    width: 10%;
+    font-size: 30px; 
+    color: dimgrey;
+}
+
+.fa-arrow-circle-left, .fa-arrow-circle-right:hover {
+    cursor: pointer;
+}    
+
+.time {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.time-btns {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding: 5px;
+}
+
+button {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 5%;
+    height: 55px;
+    background-color: rgb(226, 229, 235);
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 5%;
+    height: 55px;
+    text-align: center;
+}
