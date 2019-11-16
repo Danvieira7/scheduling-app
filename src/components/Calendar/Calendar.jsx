@@ -95,6 +95,7 @@ class Calendar extends Component {
                                     if(disable)break
                                 }
                                 return(
+                                    !disable ?
                                     <button 
                                         className="time-btn"
                                         type="button"   
@@ -104,9 +105,11 @@ class Calendar extends Component {
                                     > 
                                         { time }  
                                     </button>
+                                    :
+                                    <button className="time-btn" key={idx} disabled={disable}> - </button>
                                 )                                
                             })}
-                            <button className="time-btn" type="button"> MORE </button>
+                            <button className="time-btn" type="button" > MORE </button>
                         </div>
                     )}
                 </div>
