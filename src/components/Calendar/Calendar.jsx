@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import November from "../../calendar"
+import apptService from "../../utils/appointmentService"
 
 import "./Calendar.css";
 
@@ -19,9 +20,11 @@ class Calendar extends Component {
     }
     
     async componentDidMount() {
+        const data = await apptService.getAppointments()
         this.setState({
             month: November,
-            showComp: November.filter((x, idx) => idx >= min && idx < max )
+            showComp: November.filter((x, idx) => idx >= min && idx < max ),
+            appt: data
         })
     }
     
@@ -42,13 +45,16 @@ class Calendar extends Component {
     }
 
     handleAppointment = (date, time) => {
-        newAppt.push({
+        newAppt = [...this.state.appt]
+        var appt = [{
             date: date.date,
             day: date.day,
             month: date.month,
             time: time
-        })
+        }];
+        newAppt.push(appt[0])
         this.setState({ appt: newAppt })
+        apptService.createAppointment(appt)   
     }
     
     render() {
@@ -90,6 +96,7 @@ class Calendar extends Component {
                                 }
                                 return(
                                     <button 
+                                        className="time-btn"
                                         type="button"   
                                         key={ idx }
                                         disabled={ disable }
@@ -99,7 +106,7 @@ class Calendar extends Component {
                                     </button>
                                 )                                
                             })}
-                            <button type="button"> MORE </button>
+                            <button className="time-btn" type="button"> MORE </button>
                         </div>
                     )}
                 </div>

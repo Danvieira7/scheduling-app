@@ -1,12 +1,16 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-var appointmentSchema = new Schema({
+var AppointmentSchema = new Schema({
+    date: {
+        type: Number,
+        required: true
+    },
     day: { 
         type: String, 
         required: true 
     },
-    Month: {
+    month: {
         type: String, 
         required: true 
     },
@@ -16,4 +20,4 @@ var appointmentSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model('Appointment', appointmentSchema);
+module.exports = mongoose.model('Appointment', AppointmentSchema);
