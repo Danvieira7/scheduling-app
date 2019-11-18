@@ -74,8 +74,7 @@
     display: flex;
     flex-flow: wrap;
     justify-content: center;
-    padding: 20px;
-    
+    padding: 20px; 
 }
 
 .appt p {
