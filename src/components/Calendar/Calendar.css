@@ -57,6 +57,7 @@
     height: 55px;
     background-color: rgb(226, 229, 235);
     font-weight: bold;
+    color: dimgray;
 }
 
 .button {
