@@ -69,6 +69,35 @@
     text-align: center;
 }
 
+.appts {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    padding: 20px;
+    
+}
+
+.appt p {
+    margin-top: 15px;
+}
+
+.appt {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 30%;
+    height: 60px;
+    margin: 2px;
+}
+
+.fa-trash-alt:hover {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1100px) {
     .calendar {
         width: 80%

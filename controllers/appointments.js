@@ -24,5 +24,8 @@ function makeAppointment(req, res) {
 }
 
 function deleteAppointment(req, res) {
-
+    Appointment.findById({_id: req.body._id}, function(err, appt){
+        appt.remove();
+        appt.save();
+    })
 }

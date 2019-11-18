@@ -20,8 +20,17 @@ function createAppointment(info) {
     });
 }
 
-function removeAppointment() {
-
+function removeAppointment(data) {
+    return fetch(BASE_URL + 'deleteAppointment', {
+        method: 'POST',
+        headers: new Headers({
+          'Content-Type': 'application/json', 
+        }),
+        body: JSON.stringify(data)
+      })
+      .then(res => {
+        return res.json();
+      });
 }
 
 export default {
