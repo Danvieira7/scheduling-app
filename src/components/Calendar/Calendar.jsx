@@ -125,7 +125,7 @@ class Calendar extends Component {
                 <div className="appts">
                     {this.state.appt.map( (a, idx) => 
                         <div className="appt p-3 mb-2 bg-primary text-white" key={idx}>
-                            <p>{ a.day } {a.month} { a.date } </p> 
+                            <p>{ a.day } - {a.month} { a.date } - @ { a.time } </p> 
                             <i className="fas fa-trash-alt" onClick={() => this.deleteAppt(a)}> </i>
                         </div>
                     )}

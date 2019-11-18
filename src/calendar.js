@@ -2,87 +2,87 @@ const november = [
     { 
         date: 14, 
         month: 'NOV', 
-        day: 'Thu' 
+        day: 'THU' 
     },
     { 
         date: 15, 
         month: 'NOV', 
-        day: 'Fri' 
+        day: 'FRI' 
     },
     { 
         date: 16, 
         month: 'NOV', 
-        day: 'Sat' 
+        day: 'SAT' 
     },
     { 
         date: 17, 
         month: 'NOV', 
-        day: 'Sun' 
+        day: 'SUN' 
     },
     { 
         date: 18, 
         month: 'NOV', 
-        day: 'Mon' 
+        day: 'MON' 
     },
     { 
         date: 19, 
         month: 'NOV', 
-        day: 'Tue' 
+        day: 'TUE' 
     },
     { 
         date: 20, 
         month: 'NOV', 
-        day: 'Wed' 
+        day: 'WED' 
     },
     { 
         date: 21, 
         month: 'NOV', 
-        day: 'Thu' 
+        day: 'THU' 
     },
     { 
         date: 22, 
         month: 'NOV', 
-        day: 'Fri' 
+        day: 'FRI' 
     },
     { 
         date: 23, 
         month: 'NOV', 
-        day: 'Sat' 
+        day: 'SAT' 
     },
     { 
         date: 24, 
         month: 'NOV', 
-        day: 'Sun' 
+        day: 'SUN' 
     },
     { 
         date: 25, 
         month: 'NOV', 
-        day: 'Mon' 
+        day: 'MON' 
     },
     { 
         date: 26, 
         month: 'NOV', 
-        day: 'Tue' 
+        day: 'TUE' 
     },
     { 
         date: 27, 
         month: 'NOV', 
-        day: 'Wed' 
+        day: 'WED' 
     },
     { 
         date: 28, 
         month: 'NOV', 
-        day: 'Thu' 
+        day: 'THU' 
     },
     { 
         date: 29, 
         month: 'NOV', 
-        day: 'Fri' 
+        day: 'FRI' 
     },
     { 
         date: 30, 
         month: 'NOV', 
-        day: 'Sat' 
+        day: 'SAT' 
     }
 ];
 
